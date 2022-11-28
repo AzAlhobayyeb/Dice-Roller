@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun rolldice() {
-        val dice = dice(6)
+        val dice = Dice(6)
         val diceRoll = dice.roll()
         val diceImage: ImageView = findViewById(R.id.image)
 
@@ -34,9 +34,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
-class dice(private val  numSides: Int){
+class Dice(val num : Int){
 
     fun roll(): Int{
-        return (1..numSides).random()
+        return (1..num).random()
     }
 }
